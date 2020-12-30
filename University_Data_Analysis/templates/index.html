@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">OpenSource_Project</a>
+        </div>
+        <div id="navbar" class="nav nav-pills pull-right">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/learnmore">Introduce</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/pie">PieGraph</a></li>
+                <li><a href="/bar">BarGraph</a></li>
+                <li><a href="/geo">GeoGraph</a></li>
+                <li><a href="/liquid">LiquidGraph</a></li>
+                <li><a href="/attribute">Attribute</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<br><br>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>University Data Analysis</h1>
+                <br>
+                <p>This is a college data information statistics site. you can check the distribution of colleges, the level of
+                    colleges and the number of regions from these bar charts or pie charts, for the convenience of the demanders
+                    to a certain extent to understand and query the college information.</p>
+                <br>
+                <p><a class="btn btn-primary btn-lg" href="/learnmore" role="button">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <img src="/static/assets/images/opensource2.png" alt="开源图片" height="379" width="471" >
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/static/assets/images/pie1.jpg" alt="饼图" height="184.25" width="175">
+            <h2>PieGraph</h2>
+            <hr>
+            <p style="font-size: 18px">In this module, we made statistics on the number of 985, 211 universities in each province as the form of
+                pie chart.</p>
+            <hr>
+            <p><a class="btn btn-primary" href="/pie" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <img src="/static/assets/images/bar3.jpg" alt="柱状图" height="184.25" width="175">
+            <h2>BarGraph</h2>
+            <hr>
+            <p style="font-size: 18px">In this module, we made statistics on the number of universities
+                in each province as the form of bar chart.</p>
+            <hr>
+            <p><a class="btn btn-primary" href="/bar" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <img src="/static/assets/images/geo1.jpg" alt="热力图" height="184.25" width="175">
+            <h2>GeoGraph</h2>
+            <hr>
+            <p style="font-size: 18px">In this module, we present the distribution of universities and 985, 211 universities in China as the form
+                of geographic graph.</p>
+            <hr>
+            <p><a class="btn btn-primary" href="/geo" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/static/assets/images/liquid.jpg" alt="水球图" height="184.25" width="175">
+            <h2>LiquidGraph</h2>
+            <hr>
+            <p style="font-size: 18px">In this module, we made statistics on some cities with high quality universities as the form
+                of liquid graph.</p>
+            <hr>
+            <p><a class="btn btn-primary" href="/liquid" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <img src="/static/assets/images/attribute1.png" alt="综合属性" height="184.25" width="175">
+            <h2>Comprehensive Attribute</h2>
+            <hr>
+            <p style="font-size: 18px">In this module, we made statistics on the comprehensive attribute of
+                universities, including the nature and type.</p>
+            <hr>
+            <p><a class="btn btn-primary" href="/attribute" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+    <footer>
+        <p style="text-align: center">&copy; 201892055开源软件基础大作业</p>
+        <br>
+    </footer>
+
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

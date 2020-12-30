@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liquid Graph</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-liquidfill.min.js"></script>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">OpenSource_Project</a>
+        </div>
+        <div id="navbar" class="nav nav-pills pull-right">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/learnmore">Introduce</a></li>
+                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/pie">PieGraph</a></li>
+                <li><a href="/bar">BarGraph</a></li>
+                <li><a href="/geo">GeoGraph</a></li>
+                <li class="active"><a href="/liquid">LiquidGraph</a></li>
+                <li><a href="/attribute">Attribute</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div id="02a5bfb7964249b6afb0556b85893b12" class="chart-container col-md-4"
+             style="width:500px; height:400px;"></div>
+        <script>
+            var chart_02a5bfb7964249b6afb0556b85893b12 = echarts.init(
+                document.getElementById('02a5bfb7964249b6afb0556b85893b12'), 'white', {renderer: 'canvas'});
+            var option_02a5bfb7964249b6afb0556b85893b12 = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "color": [
+                    "#c23531",
+                    "#2f4554",
+                    "#61a0a8",
+                    "#d48265",
+                    "#749f83",
+                    "#ca8622",
+                    "#bda29a",
+                    "#6e7074",
+                    "#546570",
+                    "#c4ccd3",
+                    "#f05b72",
+                    "#ef5b9c",
+                    "#f47920",
+                    "#905a3d",
+                    "#fab27b",
+                    "#2a5caa",
+                    "#444693",
+                    "#726930",
+                    "#b2d235",
+                    "#6d8346",
+                    "#ac6767",
+                    "#1d953f",
+                    "#6950a1",
+                    "#918597"
+                ],
+                "series": [
+                    {
+                        "type": "liquidFill",
+                        "data": [
+                            0.21739130434782608
+                        ],
+                        "waveAnimation": true,
+                        "animationDuration": 2000,
+                        "animationDurationUpdate": 1000,
+                        "color": [
+                            "#294D99",
+                            "#156ACF",
+                            "#1598ED",
+                            "#45BDFF"
+                        ],
+                        "shape": "circle",
+                        "backgroundStyle": {},
+                        "outline": {
+                            "show": true,
+                            "borderDistance": 8
+                        },
+                        "label": {
+                            "show": true,
+                            "position": "inside",
+                            "margin": 8,
+                            "fontSize": 50
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [],
+                        "selected": {},
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5
+                },
+                "title": [
+                    {
+                        "text": "\u5317\u4eac985\u9ad8\u6821\u5360\u6bd4",
+                        "padding": 5,
+                        "itemGap": 10
+                    }
+                ]
+            };
+            chart_02a5bfb7964249b6afb0556b85893b12.setOption(option_02a5bfb7964249b6afb0556b85893b12);
+        </script>
+        <div id="03256c19b520422d8c37cd0fdb7f4ff9" class="chart-container col-md-4 col-md-offset-1"
+             style="width:500px; height:400px;"></div>
+        <script>
+            var chart_03256c19b520422d8c37cd0fdb7f4ff9 = echarts.init(
+                document.getElementById('03256c19b520422d8c37cd0fdb7f4ff9'), 'white', {renderer: 'canvas'});
+            var option_03256c19b520422d8c37cd0fdb7f4ff9 = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "color": [
+                    "#c23531",
+                    "#2f4554",
+                    "#61a0a8",
+                    "#d48265",
+                    "#749f83",
+                    "#ca8622",
+                    "#bda29a",
+                    "#6e7074",
+                    "#546570",
+                    "#c4ccd3",
+                    "#f05b72",
+                    "#ef5b9c",
+                    "#f47920",
+                    "#905a3d",
+                    "#fab27b",
+                    "#2a5caa",
+                    "#444693",
+                    "#726930",
+                    "#b2d235",
+                    "#6d8346",
+                    "#ac6767",
+                    "#1d953f",
+                    "#6950a1",
+                    "#918597"
+                ],
+                "series": [
+                    {
+                        "type": "liquidFill",
+                        "data": [
+                            0.22988505747126436
+                        ],
+                        "waveAnimation": true,
+                        "animationDuration": 2000,
+                        "animationDurationUpdate": 1000,
+                        "color": [
+                            "#294D99",
+                            "#156ACF",
+                            "#1598ED",
+                            "#45BDFF"
+                        ],
+                        "shape": "circle",
+                        "backgroundStyle": {},
+                        "outline": {
+                            "show": true,
+                            "borderDistance": 8
+                        },
+                        "label": {
+                            "show": true,
+                            "position": "inside",
+                            "margin": 8,
+                            "fontSize": 50
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [],
+                        "selected": {},
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5
+                },
+                "title": [
+                    {
+                        "text": "\u5317\u4eac211\u9ad8\u6821\u5360\u6bd4",
+                        "padding": 5,
+                        "itemGap": 10
+                    }
+                ]
+            };
+            chart_03256c19b520422d8c37cd0fdb7f4ff9.setOption(option_03256c19b520422d8c37cd0fdb7f4ff9);
+        </script>
+    </div>
+    <br>
+    <div class="row">
+        <div id="ea6244b40b7f48b8935e4a42677782c4" class="chart-container col-md-4"
+             style="width:500px; height:400px;"></div>
+        <script>
+            var chart_ea6244b40b7f48b8935e4a42677782c4 = echarts.init(
+                document.getElementById('ea6244b40b7f48b8935e4a42677782c4'), 'white', {renderer: 'canvas'});
+            var option_ea6244b40b7f48b8935e4a42677782c4 = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "color": [
+                    "#c23531",
+                    "#2f4554",
+                    "#61a0a8",
+                    "#d48265",
+                    "#749f83",
+                    "#ca8622",
+                    "#bda29a",
+                    "#6e7074",
+                    "#546570",
+                    "#c4ccd3",
+                    "#f05b72",
+                    "#ef5b9c",
+                    "#f47920",
+                    "#905a3d",
+                    "#fab27b",
+                    "#2a5caa",
+                    "#444693",
+                    "#726930",
+                    "#b2d235",
+                    "#6d8346",
+                    "#ac6767",
+                    "#1d953f",
+                    "#6950a1",
+                    "#918597"
+                ],
+                "series": [
+                    {
+                        "type": "liquidFill",
+                        "data": [
+                            0.41304347826086957
+                        ],
+                        "waveAnimation": true,
+                        "animationDuration": 2000,
+                        "animationDurationUpdate": 1000,
+                        "color": [
+                            "#294D99",
+                            "#156ACF",
+                            "#1598ED",
+                            "#45BDFF"
+                        ],
+                        "shape": "circle",
+                        "backgroundStyle": {},
+                        "outline": {
+                            "show": true,
+                            "borderDistance": 8
+                        },
+                        "label": {
+                            "show": true,
+                            "position": "inside",
+                            "margin": 8,
+                            "fontSize": 50
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [],
+                        "selected": {},
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5
+                },
+                "title": [
+                    {
+                        "text": "\u5317\u4eac\u4e0a\u6d77\u6c5f\u82cf985\u9ad8\u6821\u5360\u6bd4",
+                        "padding": 5,
+                        "itemGap": 10
+                    }
+                ]
+            };
+            chart_ea6244b40b7f48b8935e4a42677782c4.setOption(option_ea6244b40b7f48b8935e4a42677782c4);
+        </script>
+        <div id="9d5dcf947da94ad2a4134ea442dcb3bc" class="chart-container col-md-4 col-md-offset-1"
+             style="width:500px; height:400px;"></div>
+        <script>
+            var chart_9d5dcf947da94ad2a4134ea442dcb3bc = echarts.init(
+                document.getElementById('9d5dcf947da94ad2a4134ea442dcb3bc'), 'white', {renderer: 'canvas'});
+            var option_9d5dcf947da94ad2a4134ea442dcb3bc = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "color": [
+                    "#c23531",
+                    "#2f4554",
+                    "#61a0a8",
+                    "#d48265",
+                    "#749f83",
+                    "#ca8622",
+                    "#bda29a",
+                    "#6e7074",
+                    "#546570",
+                    "#c4ccd3",
+                    "#f05b72",
+                    "#ef5b9c",
+                    "#f47920",
+                    "#905a3d",
+                    "#fab27b",
+                    "#2a5caa",
+                    "#444693",
+                    "#726930",
+                    "#b2d235",
+                    "#6d8346",
+                    "#ac6767",
+                    "#1d953f",
+                    "#6950a1",
+                    "#918597"
+                ],
+                "series": [
+                    {
+                        "type": "liquidFill",
+                        "data": [
+                            0.41379310344827586
+                        ],
+                        "waveAnimation": true,
+                        "animationDuration": 2000,
+                        "animationDurationUpdate": 1000,
+                        "color": [
+                            "#294D99",
+                            "#156ACF",
+                            "#1598ED",
+                            "#45BDFF"
+                        ],
+                        "shape": "circle",
+                        "backgroundStyle": {},
+                        "outline": {
+                            "show": true,
+                            "borderDistance": 8
+                        },
+                        "label": {
+                            "show": true,
+                            "position": "inside",
+                            "margin": 8,
+                            "fontSize": 50
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [],
+                        "selected": {},
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5
+                },
+                "title": [
+                    {
+                        "text": "\u5317\u4eac\u4e0a\u6d77\u6c5f\u82cf211\u9ad8\u6821\u5360\u6bd4",
+                        "padding": 5,
+                        "itemGap": 10
+                    }
+                ]
+            };
+            chart_9d5dcf947da94ad2a4134ea442dcb3bc.setOption(option_9d5dcf947da94ad2a4134ea442dcb3bc);
+        </script>
+    </div>
+</div>
+
+<hr>
+<footer>
+    <p style="text-align: center">&copy; 201892055开源软件基础大作业</p>
+    <br>
+</footer>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
