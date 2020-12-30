@@ -10,3 +10,5 @@
 2. 使用pandas对数据进行处理与分析；
 3. 使用pyecharts将分析结果可视化；
 4. 使用flask与bootstrap制作网站。
+
+项目运行方法详见"运行方法.txt"
