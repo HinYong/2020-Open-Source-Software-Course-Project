@@ -1,0 +1,3 @@
+如果有pycharm：右键单击University_Data_Analysis文件夹，选择"open folder as pycharm project"，然后运行app.py，运行成功后会分配一个url(应该是localhost:5000)，进入那个url就是网站的主页。
+
+如果没有pycharm：使用命令行，进入University_Data_Analysis文件夹后输入python app.py，运行成功后的操作与上面的一致。
