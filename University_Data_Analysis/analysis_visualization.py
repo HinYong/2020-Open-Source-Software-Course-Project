@@ -42,7 +42,7 @@ data_985_211['rate'] = data_985_211['counts'].apply(lambda x: x / sum_985_211_co
 
 # 柱状图页面
 page = Page()
-# 各地区高校数量
+# 各地区高校数量柱状图
 bar = Bar()
 bar.add_xaxis(data['name'].values.tolist())
 bar.add_yaxis("", data['counts'].values.tolist())
@@ -64,7 +64,51 @@ bar.set_series_opts(itemstyle_opts={
         "shadowColor": 'rgb(0, 160, 221)'
     }})
 page.add(bar)
-# 各地区高质量高校数量
+# 各地区985高校数量柱状图
+bar = Bar()
+bar.add_xaxis(data_985['name'].values.tolist())
+bar.add_yaxis("", data_985['counts'].values.tolist())
+bar.set_global_opts(
+    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
+    title_opts=opts.TitleOpts(title="各地区985高校数量"),
+    datazoom_opts=opts.DataZoomOpts()
+)
+bar.set_series_opts(itemstyle_opts={
+    "normal": {
+        "color": JsCode("""new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(0, 244, 255, 1)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(0, 77, 167, 1)'
+                }], false)"""),
+        "barBorderRadius": [30, 30, 30, 30],
+        "shadowColor": 'rgb(0, 160, 221)'
+    }})
+page.add(bar)
+# 各地区211高校数量柱状图
+bar = Bar()
+bar.add_xaxis(data_211['name'].values.tolist())
+bar.add_yaxis("", data_211['counts'].values.tolist())
+bar.set_global_opts(
+    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
+    title_opts=opts.TitleOpts(title="各地区211高校数量"),
+    datazoom_opts=opts.DataZoomOpts()
+)
+bar.set_series_opts(itemstyle_opts={
+    "normal": {
+        "color": JsCode("""new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(0, 244, 255, 1)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(0, 77, 167, 1)'
+                }], false)"""),
+        "barBorderRadius": [30, 30, 30, 30],
+        "shadowColor": 'rgb(0, 160, 221)'
+    }})
+page.add(bar)
+# 各地区高质量高校数量柱状图
 bar = Bar()
 bar.add_xaxis(data_985_211['name'].values.tolist())
 bar.add_yaxis("", data_985_211['counts'].values.tolist())
@@ -91,7 +135,20 @@ page.render("templates/bar.html")
 
 # 饼图页面
 page = Page()
-# 各地区985高校数量排行
+# 各地区高校数量饼状图
+pie = Pie()
+pie.add("", [list(z) for z in zip(data['name'].values.tolist(), data['counts'].values.tolist())],
+        radius=["30%", "75%"],
+        center=["40%", "50%"],
+        rosetype="radius")
+pie.set_global_opts(
+    title_opts=opts.TitleOpts(title="各地区高校数量统计"),
+    legend_opts=opts.LegendOpts(
+        type_="scroll", pos_left="80%", orient="vertical"
+    )
+)
+page.add(pie)
+# 各地区985高校数量饼状图
 pie = Pie()
 pie.add("", [list(z) for z in zip(data_985['name'].values.tolist(), data_985['counts'].values.tolist())],
         radius=["30%", "75%"],
@@ -104,7 +161,7 @@ pie.set_global_opts(
     )
 )
 page.add(pie)
-# 各地区211高校数量统计
+# 各地区211高校数量饼状图
 pie = Pie()
 pie.add("", [list(z) for z in zip(data_211['name'].values.tolist(), data_211['counts'].values.tolist())],
         radius=["30%", "75%"],
@@ -117,7 +174,6 @@ pie.set_global_opts(
     )
 )
 page.add(pie)
-page.render("templates/pie.html")
 # 高校数量前十名的地区
 pie = Pie()
 pie.add("", [list(z) for z in zip(data['name'].values.tolist()[:10], data['counts'].values.tolist()[:10])],
@@ -144,6 +200,7 @@ pie.set_global_opts(
     )
 )
 page.add(pie)
+page.render("templates/pie.html")
 
 
 # 地图页面
@@ -169,7 +226,7 @@ geo.set_global_opts(
 )
 geo.set_series_opts(label_opts=opts.LabelOpts(is_show=False))
 page.add(geo)
-# 高质量高校分布热力图
+# 高质量高校数量热力图
 geo = Geo()
 geo.add_schema(maptype="china")
 geo.add("高质量高校分布热力图",
@@ -180,10 +237,21 @@ geo.set_global_opts(
     title_opts=opts.TitleOpts(title="高质量高校分布热力图", subtitle="包括211与985高校")
 )
 page.add(geo)
+# 高质量高校数量分段图
+geo = Geo()
+geo.add_schema(maptype="china")
+geo.add("高质量高校数量段位图", [list(z) for z in zip(data_985_211['name'].values.tolist(), data_985_211['counts'].values.tolist())],
+        type_=ChartType.EFFECT_SCATTER)
+geo.set_global_opts(
+    visualmap_opts=opts.VisualMapOpts(is_piecewise=True, max_=12, split_number=4),
+    title_opts=opts.TitleOpts(title="高质量高校数量段位图", subtitle="包括211与985高校")
+)
+geo.set_series_opts(label_opts=opts.LabelOpts(is_show=False))
+page.add(geo)
 page.render("templates/geo.html")
 
 
-# 水球图
+# 水球图页面
 page = Page()
 # 北京985高校占比
 liquid = Liquid()
@@ -208,7 +276,7 @@ page.add(liquid)
 page.render("templates/liquid.html")
 
 
-# 高校性质与类型饼图
+# 高校性质与类型页面
 page = Page()
 # 高校类型分析
 df_type = df_new[df_new['type'] != '——']
