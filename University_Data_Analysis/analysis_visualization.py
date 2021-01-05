@@ -47,7 +47,7 @@ bar = Bar()
 bar.add_xaxis(data['name'].values.tolist())
 bar.add_yaxis("", data['counts'].values.tolist())
 bar.set_global_opts(
-    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
+    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=45)),
     title_opts=opts.TitleOpts(title="各地区高校数量"),
     datazoom_opts=opts.DataZoomOpts()
 )
@@ -69,7 +69,7 @@ bar = Bar()
 bar.add_xaxis(data_985['name'].values.tolist())
 bar.add_yaxis("", data_985['counts'].values.tolist())
 bar.set_global_opts(
-    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
+    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=45)),
     title_opts=opts.TitleOpts(title="各地区985高校数量"),
     datazoom_opts=opts.DataZoomOpts()
 )
@@ -91,7 +91,7 @@ bar = Bar()
 bar.add_xaxis(data_211['name'].values.tolist())
 bar.add_yaxis("", data_211['counts'].values.tolist())
 bar.set_global_opts(
-    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
+    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=45)),
     title_opts=opts.TitleOpts(title="各地区211高校数量"),
     datazoom_opts=opts.DataZoomOpts()
 )
@@ -113,7 +113,7 @@ bar = Bar()
 bar.add_xaxis(data_985_211['name'].values.tolist())
 bar.add_yaxis("", data_985_211['counts'].values.tolist())
 bar.set_global_opts(
-    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),
+    xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=45)),
     title_opts=opts.TitleOpts(title="各地区高质量高校数量", subtitle="包括211与985高校"),
     datazoom_opts=opts.DataZoomOpts()
 )
