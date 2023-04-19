@@ -1,4 +1,4 @@
-# 2020_project
+# 2020 Open Source Software Course Project
 大连理工大学软件学院 2020开源软件基础课程项目
 
 项目名称：中国大学数据分析
